@@ -1,10 +1,11 @@
+import { revalidatePath } from "next/cache";
+
 import { UpdateUserType, UserType } from "@/types/user";
 import { connectToDatabase } from "../database";
 import User from "../database/models/user.model";
 import { handleError } from "../utils";
 import Event from "../database/models/event.model";
 import Order from "../database/models/order.model";
-import { revalidatePath } from "next/cache";
 
 export const createUser = async (user: UserType) => {
     try {
