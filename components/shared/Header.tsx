@@ -19,9 +19,11 @@ const Header = () => {
                     />
                 </Link>
 
-                <nav className="md:flex-between hidden w-full max-w-xs">
-                    <NavItems />
-                </nav>
+                <SignedIn>
+                    <nav className="md:flex-between hidden w-full max-w-xs">
+                        <NavItems />
+                    </nav>
+                </SignedIn>
 
                 <div className="flex justify-end w-32 gap-3">
                     <SignedIn>
