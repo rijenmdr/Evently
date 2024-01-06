@@ -45,7 +45,7 @@ export const createOrder = async (order: CreateOrderParams) => {
     try {
         await connectToDatabase();
 
-        const newOrder = Order.create(order);
+        const newOrder = await Order.create(order);
 
         return JSON.parse(JSON.stringify(newOrder));
     } catch (error) {
